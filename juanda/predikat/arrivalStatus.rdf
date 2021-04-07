@@ -6,8 +6,8 @@
 @prefix dbr: <https://dbpedia.org/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix yago-res: <https://yago-knowledge.org/resource/>.
-@prefix juanda: <https://github.com/Fikrivent/semanticweb/blob/main/juanda>.
+@prefix jo: <https://github.com/Fikrivent/semanticweb/blob/main/juanda/predikat>.
 
-juanda:arrivalStatus a rdf:Property.
-juanda:arrivalStatus rdfs:domain juanda:arrivSchedule.
-juanda:arrivalStatus rdfs:range xsd:string.
+jo:arrivalStatus a rdf:Property.
+jo:arrivalStatus rdfs:domain juanda:arrivSchedule.
+jo:arrivalStatus rdfs:range xsd:string.
