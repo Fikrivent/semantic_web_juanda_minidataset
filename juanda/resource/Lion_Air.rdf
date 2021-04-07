@@ -6,7 +6,7 @@
 @prefix dbr: <https://dbpedia.org/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix yago-res: <https://yago-knowledge.org/resource/>.
-@prefix juanda: <https://github.com/Fikrivent/semanticweb/blob/main/juanda>.
+@prefix juanda: <https://github.com/Fikrivent/semanticweb/blob/main/juanda/resource>.
 
 juanda:Lion_Air a schema:Organization;
 	rdfs:label "Lion Air"@en;
