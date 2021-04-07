@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix schema: <https://schema.org> .
+@prefix dbo: <https://dbpedia.org/ontology> .
+@prefix dbr: <https://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix yago-res: <https://yago-knowledge.org/resource/>.
+@prefix juanda: <https://github.com/Fikrivent/semanticweb/blob/main/juanda>.
+
+juanda:Garuda_Indonesia a schema:Organization;
+	rdfs:label "Garuda Indonesia"@en;
+	schema:name "Garuda Indonesia"^^xsd:text;
+	owl:sameAs dbr:Garuda_Indonesia.
