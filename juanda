@@ -1,0 +1,69 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix schema: <https://schema.org> .
+@prefix dbo: <https://dbpedia.org/ontology> .
+@prefix juanda: <https://juanda-airport.com/id/resource/example> .
+
+
+juanda:arrivSchedule a rdfs:Class.
+juanda:arrivSchedule rdfs:subClassof schema:Flight.
+
+juanda:Garuda_Indonesia a schema:Organization;
+	rdfs:label "Garuda Indonesia"@en;
+	schema:name "Garuda Indonesia"^^xsd:text.
+
+juanda:City_Link a schema:Organization;
+	rdfs:label "City Link"@en;
+	schema:name "City Link"^^xsd:text.
+
+juanda:Lion_Air a schema:Organization;
+	rdfs:label "Lion Air"@en;
+	schema:name "Lion Air"^^xsd:text.
+
+juanda:Jakarta a dbo:City;
+	rdfs:label "Jakarta"@en.
+
+juanda:Makassar a dbo:City;
+	rdfs:label "Makassar"@en.
+
+juanda:Ambon a dbo:City;
+	rdfs:label "Ambon"@en. 
+
+juanda:Soekarno_Hatta a schema:Airport;
+	schema:name "Soekarno - Hatta International Airport";
+	schema:iatacode "CGK"^^xsd:text .
+
+juanda:Sultan_Hasanuddin a schema:Airport;
+	schema:name "Sultan Hasanuddin International Airport";
+	schema:iatacode "UPG"^^xsd:text .
+
+juanda:Pattimura a schema:Airport;
+	schema:name "Pattimura International Airport";
+	schema:iatacode "AMQ"^^xsd:text .
+
+juanda:arrivalStatus a rdf:Property.
+juanda:arrivalStatus rdfs:domain juanda:arrivSchedule.
+juanda:arrivalStatus rdfs:range xsd:string.
+
+
+juanda:FL_001 a juanda:arrivSchedule;
+	schema:provider juanda:Garuda_Indonesia;
+	juanda:departureAirport juanda:Soekarno_Hatta;
+	schema:flightNumber "GA-306"^^xsd:text;
+	schema:arrivalTime "2021-03-17 07:25:00"^^xsd:datetime;
+	juanda:arrivalStatus "SCHEDULED"^^xsd:string.
+
+juanda:FL_002 a juanda:arrivSchedule;
+	schema:provider juanda:City_Link;
+	schema:departureAirport juanda:Sultan_Hasanuddin;
+	schema:flightNumber "QG-714"^^xsd:text;
+	schema:arrivalTime "2021-03-17 07:30:00"^^xsd:datetime;
+	juanda:arrivalStatus "SCHEDULED"^^xsd:string.
+
+juanda:FL_003 a juanda:arrivSchedule;
+	schema:provider juanda:Lion_Air;
+	schema:departureAirport juanda:Pattimura;
+	schema:flightNumber "JT-707"^^xsd:text;
+	schema:arrivalTime "2021-03-17 13:20:00"^^xsd:datetime;
+	juanda:arrivalStatus "SCHEDULED"^^xsd:string.
