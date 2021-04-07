@@ -3,38 +3,49 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix schema: <https://schema.org> .
 @prefix dbo: <https://dbpedia.org/ontology> .
+@prefix dbr: <https://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix yago-res: <https://yago-knowledge.org/resource/>.
+@prefix juanda: <https://github.com/Fikrivent/semanticweb/blob/main/flight>.
 
 juanda:arrivSchedule a rdfs:Class.
 juanda:arrivSchedule rdfs:subClassof schema:Flight.
 
 juanda:Garuda_Indonesia a schema:Organization;
 	rdfs:label "Garuda Indonesia"@en;
-	schema:name "Garuda Indonesia"^^xsd:text.
+	schema:name "Garuda Indonesia"^^xsd:text;
+	owl:sameAs dbr:Garuda_Indonesia.
 
 juanda:City_Link a schema:Organization;
 	rdfs:label "City Link"@en;
-	schema:name "City Link"^^xsd:text.
+	schema:name "City Link"^^xsd:text;
+	owl:sameAs dbr:Citilink.
 
 juanda:Lion_Air a schema:Organization;
 	rdfs:label "Lion Air"@en;
-	schema:name "Lion Air"^^xsd:text.
+	schema:name "Lion Air"^^xsd:text;
+	owl:sameAs dbr:Lion_Air.
 
 juanda:Jakarta a dbo:City;
-	rdfs:label "Jakarta"@en.
+	rdfs:label "Jakarta"@en;
+	owl:sameAs yago-res:Jakarta.
 
 juanda:Makassar a dbo:City;
-	rdfs:label "Makassar"@en.
+	rdfs:label "Makassar"@en;
+	rdfs:seeAlso dbr:Makassar.
 
 juanda:Ambon a dbo:City;
 	rdfs:label "Ambon"@en. 
 
 juanda:Soekarno_Hatta a schema:Airport;
 	schema:name "Soekarno - Hatta International Airport";
-	schema:iatacode "CGK"^^xsd:text .
+	schema:iatacode "CGK"^^xsd:text;
+	rdfs:seeAlso dbr:Soekarno-Hatta_International_Airport.
 
 juanda:Sultan_Hasanuddin a schema:Airport;
 	schema:name "Sultan Hasanuddin International Airport";
-	schema:iatacode "UPG"^^xsd:text .
+	schema:iatacode "UPG"^^xsd:text;
+	rdfs:seeAlso dbr:Sultan_Hasanuddin_International_Airport.
 
 juanda:Pattimura a schema:Airport;
 	schema:name "Pattimura International Airport";
