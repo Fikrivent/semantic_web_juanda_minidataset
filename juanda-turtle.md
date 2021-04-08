@@ -54,3 +54,24 @@ juanda:Pattimura a schema:Airport;
 juanda:arrivalStatus a rdf:Property.
 juanda:arrivalStatus rdfs:domain juanda:arrivSchedule.
 juanda:arrivalStatus rdfs:range xsd:string.
+
+juanda:FL_001 a juanda:arrivSchedule;
+	schema:provider juanda:Garuda_Indonesia;
+	juanda:departureAirport juanda:Soekarno_Hatta;
+	schema:flightNumber "GA-306"^^xsd:text;
+	schema:arrivalTime "2021-03-17 07:25:00"^^xsd:datetime;
+	jo:arrivalStatus "SCHEDULED"^^xsd:string.
+
+juanda:FL_002 a juanda:arrivSchedule;
+	schema:provider juanda:City_Link;
+	schema:departureAirport juanda:Sultan_Hasanuddin;
+	schema:flightNumber "QG-714"^^xsd:text;
+	schema:arrivalTime "2021-03-17 07:30:00"^^xsd:datetime;
+	jo:arrivalStatus "SCHEDULED"^^xsd:string.
+
+juanda:FL_003 a juanda:arrivSchedule;
+	schema:provider juanda:Lion_Air;
+	schema:departureAirport juanda:Pattimura;
+	schema:flightNumber "JT-707"^^xsd:text;
+	schema:arrivalTime "2021-03-17 13:20:00"^^xsd:datetime;
+	jo:arrivalStatus "SCHEDULED"^^xsd:string.
