@@ -52,9 +52,9 @@ juanda:Pattimura a schema:Airport;
 	schema:name "Pattimura International Airport";
 	schema:iatacode "AMQ"^^xsd:text .
 
-juanda:arrivalStatus a rdf:Property.
-juanda:arrivalStatus rdfs:domain juanda:arrivSchedule.
-juanda:arrivalStatus rdfs:range xsd:string.
+jo:arrivalStatus a rdf:Property.
+jo:arrivalStatus rdfs:domain juanda:arrivSchedule.
+jo:arrivalStatus rdfs:range xsd:string.
 
 juanda:FL_001 a juanda:arrivSchedule;
 	schema:provider juanda:Garuda_Indonesia;
