@@ -1,0 +1,76 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix schema: <https://schema.org> .
+@prefix dbo: <https://dbpedia.org/ontology> .
+@prefix dbr: <https://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix yago-res: <https://yago-knowledge.org/resource/>.
+@prefix juanda: <https://github.com/Fikrivent/semanticweb/blob/main/juanda/resource/> .
+@prefix jo: <https://github.com/Fikrivent/semanticweb/blob/main/juanda/predikat/>.
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dash: <http://datashapes.org/dash#> .
+
+
+schema:OrganizationShape a sh:NodeShape ;
+	sh:targetClass schema:Organization ;
+	sh:property [
+		sh:path schema:name ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:string ;
+	] .
+
+dbo:CityShape a sh:NodeShape ;
+	sh:targetClass dbo:City ;
+	sh:property [
+		sh:path rdfs:label ;
+		sh:languageIn ("en") ;
+	] .
+
+schema:AirportShape a sh:NodeShape ;
+	sh:targetClass schema:Airport ;
+	sh:property [
+		sh:path schema:name ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:iatacode ;
+		sh:maxCount 1;
+		sh:minCount 1;
+		sh:datatype xsd:string ;
+	] .
+
+jo:arrivalStatusShape a sh:PopertyShape ;
+	sh:path jo:arrivalStatus ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:datatype xsd:string .
+
+juanda:FlightShape a sh:NodeShape ;
+	sh:targetClass juanda:arrivSchedule ;
+	sh:property [
+		sh:path schema:provider ; 
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:class schema:Organization ;
+	] ;
+	sh:property [
+		sh:path schema:departureAirport ;
+		sh:class schema:Airport ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property [
+		sh:path schema:flightNumber ; 
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:arrivalTime ; 
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:datatype xsd:datetime ;
+	] ;
+	sh:property jo:arrivalStatusShape .
