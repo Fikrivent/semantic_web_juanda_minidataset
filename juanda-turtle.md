@@ -6,8 +6,8 @@
 @prefix dbr: <https://dbpedia.org/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix yago-res: <https://yago-knowledge.org/resource/>.
-@prefix juanda: <https://github.com/Fikrivent/semanticweb/blob/main/juanda/resource> .
-@prefix jo: <https://github.com/Fikrivent/semanticweb/blob/main/juanda/predikat>.
+@prefix juanda: <https://github.com/Fikrivent/semanticweb/blob/main/juanda/resource/> .
+@prefix jo: <https://github.com/Fikrivent/semanticweb/blob/main/juanda/predikat/>.
 
 juanda:arrivSchedule a rdfs:Class.
 juanda:arrivSchedule rdfs:subClassof schema:Flight.
