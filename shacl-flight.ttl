@@ -18,6 +18,13 @@ schema:OrganizationShape a sh:NodeShape ;
 		sh:path schema:name ;
 		sh:maxCount 1 ;
 		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path rdfs:label ;
+		sh:languageIn ("en") ;
+	] ;
+	sh:property [
+		sh:path owl:sameAs ;
 	] .
 
 dbo:CityShape a sh:NodeShape ;
@@ -25,7 +32,10 @@ dbo:CityShape a sh:NodeShape ;
 	sh:property [
 		sh:path rdfs:label ;
 		sh:languageIn ("en") ;
-	] .
+	] ;
+	sh:property [
+		sh:path rdfs:seeAlso ;
+	].
 
 schema:AirportShape a sh:NodeShape ;
 	sh:targetClass schema:Airport ;
