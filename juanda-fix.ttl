@@ -17,7 +17,7 @@ juanda:arrivalStatus rdfs:range xsd:string.
 
 juanda:FL_001 a juanda:arrivSchedule;
 	schema:provider dbr:Garuda_Indonesia;
-	schema:departureAirport dbr:Soekarno–Hatta_International_Airport;
+	schema:departureAirport dbr:Soekarno\'-Hatta_International_Airport;
     	schema:arrivalAirport dbr:Juanda_International_Airport ;
 	schema:flightNumber "GA-306"^^xsd:text;
 	schema:arrivalTime "2021-03-17 07:25:00"^^xsd:datetime;
@@ -38,4 +38,3 @@ juanda:FL_003 a juanda:arrivSchedule;
 	schema:flightNumber "JT-707"^^xsd:text;
 	schema:arrivalTime "2021-03-17 13:20:00"^^xsd:datetime;
 	juanda:arrivalStatus "SCHEDULED"^^xsd:string.
-
