@@ -38,3 +38,11 @@ juanda:FL_003 a juanda:arrivSchedule;
 	schema:flightNumber "JT-707"^^xsd:text;
 	schema:arrivalTime "2021-03-17 13:20:00"^^xsd:datetime;
 	juanda:arrivalStatus "SCHEDULED"^^xsd:string.
+
+juanda:FL_003 a juanda:arrivSchedule;
+	schema:provider dbr:Lion_Air;
+	schema:departureAirport dbr:Sultan_Hasanuddin_International_Airport;
+    	schema:arrivalAirport dbr:Juanda_International_Airport ;
+	schema:flightNumber "JN-703"^^xsd:text;
+	schema:arrivalTime "2021-03-17 13:20:00"^^xsd:datetime;
+	juanda:arrivalStatus "SCHEDULED"^^xsd:string.
