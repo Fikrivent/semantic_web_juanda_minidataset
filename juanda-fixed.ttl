@@ -17,6 +17,7 @@ juanda:arrivalStatus rdfs:range xsd:string.
 
 juanda:FL_001 a juanda:arrivSchedule;
 	schema:provider dbr:Garuda_Indonesia;
+        schema:name "FL_001"@en;
 	schema:departureAirport dbr:Soekarno_Hatta_International_Airport;
     	schema:arrivalAirport dbr:Juanda_International_Airport ;
 	schema:flightNumber "GA-306"^^xsd:text;
