@@ -6,7 +6,7 @@
 @prefix dbr: <https://dbpedia.org/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix yago-res: <https://yago-knowledge.org/resource/>.
-@prefix j: <https://raw.githubusercontent.com/Fikrivent/semanticweb/main/juanda-fixed.ttl#>.
+@prefix j: <https://raw.githubusercontent.com/Fikrivent/semanticweb/main/neo4j/juanda/base.ttl#>.
 
 j:arrivSchedule a rdfs:Class.
 j:arrivSchedule rdfs:subClassof schema:Flight.
